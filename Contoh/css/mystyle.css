@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+.container {
+  width: 90%;
+  margin: auto;
+  background: antiquewhite;
+  padding: 5px;
+  box-shadow: 0px 2px 10px lightgray;
+  border-radius: 16px;
+  display: grid;
+  grid-template-areas:
+    "active total recovered deaths";
+  gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (max-width: 650px) {
+  .container {
+    grid-template-areas:
+      "active total"
+      "recovered deaths";
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-areas:
+      "active"
+      "total"
+      "recovered"
+      "deaths";
+    grid-template-columns: 1fr;
+  }
+}
+.item i {
+  font-size: 2rem;
+  margin: 0px;
+}
+h5 {
+  margin: 0px;
+}
+div.item {
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin: 0px;
+  color: azure;
+}
+.active {
+    background: #41a7ff;
+    grid-area: active;
+}
+.recovered {
+    background: #32b336;
+    grid-area: recovered;
+}
+.total {
+    background: #d83f3f;
+    grid-area: total;
+}
+.deaths {
+    background: #ff0053;
+    grid-area: deaths;
+}
+
+.table {
+  width: 90%;
+  padding: 0px;
+  margin: 0px auto 30px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  column-gap: 2px;
+}
+.title {
+  color: aliceblue;
+  background-color: lightslategrey;
+}
+li {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+li.item-odd {
+  background-color: beige;
+}
+
+li.item-even {
+  background-color: bisque;
+}
